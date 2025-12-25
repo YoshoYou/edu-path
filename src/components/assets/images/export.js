@@ -1,0 +1,10 @@
+import skill from './skillImage.jpg'
+import check from './check.png'
+import node from './node.jpeg'
+import html from './html.jpeg'
+import photoshop from './photoshop.jpeg'
+import ui from './ui.jpeg'
+import ux from './ux.jpeg'
+import cssImg from './css.jpeg'
+import buissness from './buissness.jpeg'
+export {skill,check,node,cssImg,html,photoshop,ui,ux,buissness}

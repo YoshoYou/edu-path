@@ -1,0 +1,88 @@
+import { buissness, cssImg, html, node, photoshop, ui } from "../assets/images/export"
+
+export const courseData=[
+    {
+        title:'CSS',
+        price:'50$',
+        level:'Begginer',
+        des:'Master CSS to style your web components in modern way',
+        img:`${cssImg}`,
+        id:'css',
+        lessonCount:15,
+        category:'Front-End',
+        duration:'2 weeks',
+        language:'English',
+        time:'10:00-02:00',
+        day:'Tue - Mon'
+    },
+    {
+        title:'UI/UX',
+        price:'85$',
+        level:'Advanced',
+        des:'Learn the fundementals of user interface and user experiences',
+        img:`${ui}`,
+        id:'ui',
+        lessonCount:40,
+        category:'Designing',
+        duration:'1 month',
+        language:'English',
+        time:'03:00-05:00',
+        day:'Fri - Sun'
+    },
+    {
+        title:'JavaScript',
+        price:'100$',
+        level:'Advanced',
+        des:'Acheive javaScript for modern web applications',
+        img:`${node}`,
+        id:'js',
+        lessonCount:15,
+        category:'Front-End Back-End',
+        duration:'5 weeks',
+        language:'English',
+        time:'07:00-09:00',
+        day:'Mon - Sat'
+    },
+    {
+        title:'Excel',
+        price:'60$',
+        level:'Intermediate',
+        des:'Attending an advanced Excel course to start your own buissness',
+        img:`${buissness}`,
+        id:'excel',
+        lessonCount:30,
+        category:'Front-End',
+        duration:'12 weeks',
+        language:'English',
+        time:'12:00-02:00',
+        day:'Thu - Wen'
+    },
+    {
+        title:'PhotoShop',
+        price:'120$',
+        level:'Advanced',
+        des:'Have the basic knowledge to take the best shoots and save nice images',
+        img:`${photoshop}`,
+        id:'photo',
+        lessonCount:100,
+        category:'Designing',
+        duration:'20 weeks',
+        language:'English',
+        time:'05:00-07:00',
+        day:'Sun - Mon'
+    },
+    {
+        title:'HTML',
+        price:'20$',
+        level:'Begginer',
+        des:'Learn HTML and the basic knowledg to build your app',
+        img:`${html}`,
+        id:'html',
+        lessonCount:15,
+        category:'Front-End',
+        duration:'2 weeks',
+        language:'English',
+        time:'01:00-03:00',
+        day:'Wen - Mon'
+    },
+]
