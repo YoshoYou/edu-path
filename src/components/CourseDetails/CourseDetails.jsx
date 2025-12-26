@@ -19,7 +19,7 @@ const handleRoute=()=>{
   }
 
   return (
-    <div className="h-screen bg-gray-300 flex flex-col relative items-center justify-start py-20">
+    <div className="h-full bg-gray-300 flex flex-col relative items-center justify-start py-20">
        <LogIn onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} onClick={handleRoute} className="absolute top-10 hover:text-emerald-500 cursor-pointer" />
        {hover && <span className="absolute top-10 right-[30%] bg-white/30 rounded-2xl p-2 backdrop-blur-2xl font-semibold text-xl">courses page</span> }
        <h2 className=" mb-10 text-4xl font-bold ">Course Details Page</h2>

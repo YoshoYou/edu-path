@@ -1,5 +1,5 @@
 import { BookAIcon, GraduationCapIcon, LampDeskIcon, PersonStandingIcon } from "lucide-react";
-import { buissness, cssImg, html, node, photoshop, ui } from "../assets/images/export"
+import { buissness, cssImg, girl, girl_2, html, node, photo, photoshop, ui } from "../assets/images/export"
 
 export const courseData=[
     {
@@ -109,10 +109,16 @@ export  const AboutList=[
   ];
   export const reviewList =[{
     name:'Sarah Johnson',
+    img:`${girl}`,
+    job:'Frontend Developer',
     review:'EduPath transformed my career! The courses are comprehensive and the instructors are top-notch. Highly recommend to anyone looking to upskill.',
   },{
     name:'Michel Chen',
+    img:`${photo}`,
+    job:'UI/UX Designer',
     review:'As a beginner, I found EduPath to be incredibly welcoming. The courses are well-structured, and the community support is fantastic. I landed my first developer job thanks to what I learned here!',
   },{
     name:'Emily Rodrigues',
+    img:`${girl_2}`,
+    job:'Data Analyst',
     review:'The flexibility of learning at my own pace was a game-changer. EduPath allowed me to balance my studies with work and family commitments. The skills I gained have opened new doors for me professionally.',}]

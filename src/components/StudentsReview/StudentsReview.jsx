@@ -1,4 +1,6 @@
+import { ScanFaceIcon } from "lucide-react"
 import { reviewList } from "../data/data"
+import { photo } from "../assets/images/export"
 
 
 const StudentsReview = () => {
@@ -9,10 +11,11 @@ const StudentsReview = () => {
     <p className="text-gray-600">Join thousands of satisfied learners who transformed their careers</p>
     </div>
     <div className="grid items-center grid-cols-3 gap-6 ">
-        {reviewList.map((item,idex)=>(
-            <div className=" flex flex-col sm:col-span-1 col-span-3  justify-between border border-emerald-200 rounded-xl p-6 bg-white h-full">
+        {reviewList.map((item,index)=>(
+            <div className=" flex flex-col sm:col-span-1 col-span-3  justify-between border border-emerald-200 rounded-xl p-6 bg-white h-full " key={index}>
                 <p className="text-gray-500 text-xl">{item.review}</p>
-                <span className="mt-5">{item.name}</span>
+                <span className="mt-5  text-xl font-semibold flex  gap-3 items-center"> <img src={item.img} className="w-10 h-10 rounded-full" alt="" /> {item.name}</span>
+                <span className="text-gray-500 text-lg mt-2">{item.job}</span>
             </div>
         ))}
     </div>

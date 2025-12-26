@@ -7,4 +7,7 @@ import ui from './ui.jpeg'
 import ux from './ux.jpeg'
 import cssImg from './css.jpeg'
 import buissness from './buissness.jpeg'
-export {skill,check,node,cssImg,html,photoshop,ui,ux,buissness}
+import photo from './photo.png'
+import girl from './girl.jpg'
+import girl_2 from './girl_2.jpg'
+export {skill,check,node,girl,girl_2,cssImg,html,photo,photoshop,ui,ux,buissness}
