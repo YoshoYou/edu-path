@@ -1,5 +1,8 @@
 import { GraduationCap } from 'lucide-react'
 import { check } from '../assets/images/export'
+import { useEffect, useState } from 'react'
+import { useCourse } from '../Context/ChosenCourse'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 
 const LogIn = () => {
@@ -13,6 +16,13 @@ const LogIn = () => {
         title:'10,000+ Courses',
         des:'Learn anything, anytime'
     },]
+    const {logged,setLog}=useCourse()
+    const navigate= useNavigate()
+    const handleClick=()=>{
+      setLog(true)
+      navigate('/')
+    }
+   
   return (
     <div className="w-full grid grid-cols-4 h-screen">
       <div className='lg:col-span-2 flex flex-col justify-self-center pt-30  gap-20 col-span-4'>
@@ -27,10 +37,10 @@ const LogIn = () => {
         <p className='text-gray-500'>Enter your credentials to access your account</p>
         <form action="" className='flex flex-col items-start gap-3 mt-5'>
             <label htmlFor="" className='text-lg '>Email</label>
-            <input type="text" name="" id="" placeholder='name@example.com' className='bg-gray-200 w-full px-2 py-1 rounded-lg text-gray-800 outline-emerald-400'/>
+            <input type="text" name="1" id="" placeholder='name@example.com' className='bg-gray-200 w-full px-2 py-1 rounded-lg text-gray-800 outline-emerald-400'/>
             <label htmlFor="" className='text-lg'>Password</label>
-            <input type="password" name="" id="" placeholder='Enter Your password' className='bg-gray-200 w-full px-2 py-1 rounded-lg text-gray-800 outline-emerald-400' />
-            <input type="button" value="LogIn" className='rounded-lg bg-emerald-500 w-full px-2 py-1 cursor-pointer text-white hover:bg-emerald-300' />
+            <input type="password" name="" id="2" placeholder='Enter Your password' className='bg-gray-200 w-full px-2 py-1 rounded-lg text-gray-800 outline-emerald-400' />
+            <input type="button" value="LogIn" className='rounded-lg bg-emerald-500 w-full px-2 py-1 cursor-pointer text-white hover:bg-emerald-300' onClick={handleClick} />
         </form>
       </div>
       </div>

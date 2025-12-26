@@ -6,15 +6,16 @@ import About from "./About/About"
 import NotFound from "../NotFound/NotFound"
 import Courses from "../Courses/Courses"
 import Footer from "./Footer/Footer"
+import { Route } from "lucide-react"
+import { Routes } from "react-router-dom"
+import StudentsReview from "../StudentsReview/StudentsReview"
 const Home = () => {
   return (
     <div>
       <NavBar />
       <Hero />
       <About />
-      <Courses/>
-      <NotFound/>
-      {/* <LogIn /> */}
+      <StudentsReview />
       <Footer />
     </div>
   )

@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [ react(),
     tailwindcss()
   ],
-    base: '/skill_forge/', 
+    base: '/edu-path/', 
     server:{
       port:3000,
     }

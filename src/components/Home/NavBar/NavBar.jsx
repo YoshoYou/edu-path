@@ -1,11 +1,18 @@
 import { GraduationCap,Menu,ShoppingBasket,X } from "lucide-react"
 import { useState } from "react"
 import MobileNav from "../MobileNav/MobileNav"
+import { NavLink, useNavigate } from "react-router-dom"
+import { useCourse } from "../../Context/ChosenCourse"
 export  const List=['Home','Courses',<ShoppingBasket className="hover:text-emerald-300 "/>]
-
+export  const listLink=['/','courses','cart']
 const NavBar = () => {
- 
+   
+    const navigate= useNavigate();
     const [active, setActive] = useState(0)
+    const {logged}=useCourse()
+    const handleRouteChange=()=>{
+      navigate('/login');
+    }   
 
   return (
     <nav className="bg-white border-b border-gray-300 shadow-gray-300  sticky top-0 z-50 shadow-2xs  ">
@@ -20,18 +27,18 @@ const NavBar = () => {
                     <ul className={`sm:flex hidden sm:gap-5 md:gap-20 text-2xl  `}>
                         {
                             List.map((item,index)=>(
-                        <li className={`cursor-pointer hover:bg-linear-to-br hover:from-emerald-600 hover:to-teal-600 hover:bg-clip-text hover:text-transparent self-center
+                        <NavLink to={`${listLink[index]}`} className={`cursor-pointer hover:bg-linear-to-br hover:from-emerald-600 hover:to-teal-600 hover:bg-clip-text hover:text-transparent self-center
                              ${active===index?'bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent':'text-gray-500'}`}
                         onClick={()=>setActive(index)}
                         key={index}>
                             {item}
-                            </li>
+                            </NavLink>
                             ))
                         }
                     </ul>
             </div>
-            <div className="text-white sm:block hidden bg-linear-to-br from-emerald-600 to-teal-600 p-2 rounded-lg">
-                    <button>LogIn</button>
+            <div className="text-white sm:block hidden bg-linear-to-br from-emerald-600 to-teal-600 p-2 rounded-lg cursor-pointer  hover:from-emerald-500 hover:to-teal-500">
+                    <button className="cursor-pointer" onClick={handleRouteChange}>{logged?'Log Out':"Log In"}</button>
             </div>
             
             <MobileNav />
