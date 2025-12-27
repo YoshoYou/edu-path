@@ -7,10 +7,7 @@ import { useState } from "react";
 const Cart = () => {
     const {cartInfo,setCartInfo}=useCourse()
     const navigate=useNavigate()
-    const[hover,setHover]=useState(false)
-    const handleRoute=()=>{
-      navigate('/')
-    }
+
     const handleRemove=(id)=>{
       setCartInfo((prev) => {
         const updatedCart = prev.filter(cartItem => cartItem.id !== id);
@@ -23,8 +20,6 @@ const Cart = () => {
     <div className="bg-emerald-100  w-full px-10 py-5 h-screen relative">
         <div className="flex sm:justify-between sm:flex-row flex-col gap-5 "><h3 className="text-2xl font-bold">Cart Details </h3>
          <span className="text-xl font-semibold">Total price: {cartInfo.reduce((total, item) =>{ return total =total + item.price}, 0)} $</span>
-         <LogIn className="  hover:text-emerald-500 cursor-pointer" onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} onClick={handleRoute} />
-        {hover &&  <span className="absolute sm:right-10 sm:top-10 right-70 top-30">go home</span>}
          </div>
         <div className="flex flex-col gap-10 justify-center items-center my-20">
      {cartInfo?.map((item)=>(

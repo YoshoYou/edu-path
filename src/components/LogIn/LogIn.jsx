@@ -20,7 +20,7 @@ const LogIn = () => {
     const navigate= useNavigate()
     const handleClick=()=>{
       setLog(true)
-      navigate('/')
+      navigate('/courses')
     }
    
   return (

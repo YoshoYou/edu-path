@@ -7,7 +7,7 @@ import { ContextProvider } from './components/Context/ChosenCourse.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/edu-path">
+    <BrowserRouter basename="/edu-path/">
     <ContextProvider>
     <App />
     </ContextProvider>

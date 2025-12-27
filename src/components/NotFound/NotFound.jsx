@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 const NotFound = () => {
   const navigate= useNavigate();
   const handleRoute = ()=>{
-    navigate('/');
+    navigate('/layout');
   }
   return (
     <div className="bg-emerald-300 w-full h-screen flex flex-col  justify-center items-center gap-10 ">

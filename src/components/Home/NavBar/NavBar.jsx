@@ -1,10 +1,10 @@
 import { GraduationCap,Menu,ShoppingBasket,X } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import MobileNav from "../MobileNav/MobileNav"
 import { NavLink, useNavigate } from "react-router-dom"
 import { useCourse } from "../../Context/ChosenCourse"
 export  const List=['Home','Courses',<ShoppingBasket className="hover:text-emerald-300 "/>]
-export  const listLink=['/','courses','cart']
+export  const listLink=['layout','courses','cart']
 const NavBar = () => {
    
     const navigate= useNavigate();
@@ -13,6 +13,12 @@ const NavBar = () => {
     const handleRouteChange=()=>{
       navigate('/login');
     }   
+    useEffect(()=>{
+        if(active===0){
+            navigate('/layout')
+        }
+
+    },[])
 
   return (
     <nav className="bg-white border-b border-gray-300 shadow-gray-300  sticky top-0 z-50 shadow-2xs  ">
