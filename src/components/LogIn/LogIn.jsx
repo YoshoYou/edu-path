@@ -10,11 +10,11 @@ const LogIn = () => {
         title:'10,000+ Courses',
         des:'Learn anything, anytime'
     },{
-        title:'10,000+ Courses',
-        des:'Learn anything, anytime'
+        title:'Expert Instructors',
+        des:'Learn from the best'
     },{
-        title:'10,000+ Courses',
-        des:'Learn anything, anytime'
+        title:'Lifttime Access',
+        des:'Learn at your own place'
     },]
     const {logged,setLog}=useCourse()
     const navigate= useNavigate()

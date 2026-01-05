@@ -122,3 +122,26 @@ export  const AboutList=[
     img:`${girl_2}`,
     job:'Data Analyst',
     review:'The flexibility of learning at my own pace was a game-changer. EduPath allowed me to balance my studies with work and family commitments. The skills have opened new doors for me professionally.',}]
+
+    export const FAquestion=[
+        {
+            question:'Are the courses suitable for beginners?',
+            answer:'yes,there are courses in each feild suitable for begginers and all level, you can just choose what fits you in each course'
+        },
+        {
+            question:'How long do I have access to the course?',
+            answer:'If you buy the course right now, you have access for a lifetime, But in case there is some edition and renewing in this course you must buy it again with a generouse discount as long as you are our loyal customer'
+        },
+        {
+            question:'How long does each course take?',
+            answer:' It depends on the course itself, but generally Designing courses take a bit more time than others, you can check each course details to find out'
+        },
+        {
+            question:'Is there a free trial?',
+            answer:'yes,whenever you buy a three courses you can get a free trial on a fourth one for limited time'
+        },
+        {
+            question:'Can I get a refund?',
+            answer:'In case you don\'t the course you can contact with the supporting team and have a refund up to 50% of the course price '
+        },
+    ]
