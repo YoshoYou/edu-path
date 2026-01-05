@@ -121,4 +121,4 @@ export  const AboutList=[
     name:'Emily Rodrigues',
     img:`${girl_2}`,
     job:'Data Analyst',
-    review:'The flexibility of learning at my own pace was a game-changer. EduPath allowed me to balance my studies with work and family commitments. The skills I gained have opened new doors for me professionally.',}]
+    review:'The flexibility of learning at my own pace was a game-changer. EduPath allowed me to balance my studies with work and family commitments. The skills have opened new doors for me professionally.',}]

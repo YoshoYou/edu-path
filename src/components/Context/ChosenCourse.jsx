@@ -3,7 +3,6 @@ import { createContext, useContext, useState } from "react";
 
 export const ChosenCourse = createContext();
 export const ContextProvider = ({children})=>{
-    const [chosenCourse,setChosenCourse]=useState('');
     const [logged,setLog]=useState('');
      const [cartInfo,setCartInfo]=useState(() => {
          const stored = localStorage.getItem('cartInfo');
@@ -15,7 +14,7 @@ export const ContextProvider = ({children})=>{
      })
 
     return (
-        <ChosenCourse.Provider value={{chosenCourse,setChosenCourse,logged,setLog, cartInfo,setCartInfo}}>
+        <ChosenCourse.Provider value={{logged,setLog, cartInfo,setCartInfo}}>
             {children}
         </ChosenCourse.Provider>
     )

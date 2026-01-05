@@ -1,26 +1,15 @@
-
-
-import {  LogIn } from "lucide-react";
-import { useCourse } from "../Context/ChosenCourse";
-import { useState } from "react";
-import {  Navigate, NavLink, useNavigate, useParams } from "react-router-dom";
+import {  Navigate, useParams } from "react-router-dom";
 import { courseData } from "../data/data";
 
 const CourseDetails = () => {
 const { id } = useParams();
 const course = courseData.find(c => c.id == id);
-const [hover,setHover]=useState(false)
-const navigate =useNavigate();
-const handleRoute=()=>{
-    navigate(-1)
-}
   if (!course) {
     return <Navigate to="*"  />
   }
 
   return (
-    <div className="h-full bg-gray-300 flex flex-col relative items-center justify-start py-20">
-            <LogIn  onClick={handleRoute} className="absolute top-10 hover:text-emerald-500 cursor-pointer" />
+    <div className="h-full bg-gray-300 flex flex-col relative items-center justify-start py-5">
        <h2 className=" mb-10 text-4xl font-bold ">Course Details Page</h2>
       <div className="bg-emerald-100 sm:w-100 w-70 rounded-t-xl">
         <img src={course.img} alt="course image" className="w-100 h-60 rounded-t-xl" />
@@ -35,14 +24,9 @@ const handleRoute=()=>{
                 <div className="flex justify-between text-blue-600 font-semibold mt-3">
                   <span >{course.lessonCount}</span>
                 <span >{course.price}$</span>
-                {/* 
-                
-                */}
                 </div>
-         
                </div>
       </div>
-      
     </div>
   )
 }

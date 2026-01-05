@@ -1,15 +1,14 @@
-import { LogIn, ShoppingBag, ShoppingBasket } from "lucide-react"
+import { ShoppingBasket } from "lucide-react"
 import { courseData } from "../data/data"
-import { Outlet, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useCourse } from "../Context/ChosenCourse"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 
 const Courses = () => {
   const navigate = useNavigate();
-  const {chosenCourse,setChosenCourse,cartInfo,setCartInfo,logged}=useCourse();
+  const {cartInfo,setCartInfo,logged}=useCourse();
   const handleViewDetails = (item) => {
-    setChosenCourse(item);
     navigate(`card/${item.id}`);
   };
  
@@ -58,7 +57,6 @@ const Courses = () => {
       ))}
       </div>
       </div>
-      <Outlet />
     </div>
   )
 }

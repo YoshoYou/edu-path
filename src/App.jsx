@@ -19,9 +19,9 @@ function App() {
       <Route path='layout' index element={<Layout/>} />
        <Route path='courses' element={<Courses/>}/>
        <Route path='cart' element={<Cart/>}/>
+        <Route path='/courses/card/:id' element={<CourseDetails/>}/>
       </Route>
       <Route path='/login' element={<LogIn/>}/> 
-      <Route path='/courses/card/:id' element={<CourseDetails/>}/>
       <Route path='*' element={<NotFound/>}/>
      </Routes>
       </div>

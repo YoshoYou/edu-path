@@ -1,7 +1,4 @@
-import { ScanFaceIcon } from "lucide-react"
 import { reviewList } from "../data/data"
-import { photo } from "../assets/images/export"
-
 
 const StudentsReview = () => {
   return (
