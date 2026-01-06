@@ -3,7 +3,7 @@ import { FAquestion, reviewList } from "../data/data"
 
 const FAQsection = () => {
   return (
-  <div className="bg-white  px-4 h-full py-20 flex  flex-col gap-20">
+  <div className="bg-white  px-4 h-full  py-20 flex  flex-col gap-20">
         <div className="flex flex-col items-center gap-2">
     <h3 className="font-bold text-4xl">Frequently Asked  <span className="text-transparent bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text">Question?</span> </h3>
     <p className="text-gray-600">The most common question our students and reviwers ask us about</p>

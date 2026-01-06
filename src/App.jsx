@@ -2,7 +2,6 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './components/Home/Home'
-import NavBar from './components/Home/NavBar/NavBar'
 import LogIn from './components/LogIn/LogIn'
 import NotFound from './components/NotFound/NotFound'
 import CourseDetails from './components/CourseDetails/CourseDetails'
@@ -15,8 +14,8 @@ function App() {
   return (
     <div className="App">
      <Routes>
-      <Route path='/' element={<Home/>}>
-      <Route path='layout' index element={<Layout/>} />
+      <Route path='/' element={<Layout/>}>
+      <Route path='home' index element={<Home/>} />
        <Route path='courses' element={<Courses/>}/>
        <Route path='cart' element={<Cart/>}/>
         <Route path='/courses/card/:id' element={<CourseDetails/>}/>

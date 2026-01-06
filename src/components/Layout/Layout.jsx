@@ -1,16 +1,14 @@
-import FAQsection from "../FAQsection/FAQsection"
-import About from "../Home/About/About"
-import Hero from "../Home/Hero/Hero"
-import StudentsReview from "../StudentsReview/StudentsReview"
+import { Outlet } from "react-router-dom"
+import NavBar from "../Home/NavBar/NavBar"
+import Footer from "../Home/Footer/Footer"
 
 
 const Layout = () => {
   return (
     <div>
-      <Hero />
-      <About />
-      <StudentsReview />
-      <FAQsection />
+      <NavBar />
+      <Outlet />
+      <Footer />
     </div>
   )
 }

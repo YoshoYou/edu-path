@@ -1,21 +1,12 @@
 import { GraduationCap } from 'lucide-react'
 import { check } from '../assets/images/export'
-import { useEffect, useState } from 'react'
 import { useCourse } from '../Context/ChosenCourse'
-import { Navigate, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
+import { logInfo } from '../data/data'
 
 
 const LogIn = () => {
-    const logInfo=[{
-        title:'10,000+ Courses',
-        des:'Learn anything, anytime'
-    },{
-        title:'Expert Instructors',
-        des:'Learn from the best'
-    },{
-        title:'Lifttime Access',
-        des:'Learn at your own place'
-    },]
+
     const {logged,setLog}=useCourse()
     const navigate= useNavigate()
     const handleClick=()=>{

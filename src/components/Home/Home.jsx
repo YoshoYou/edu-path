@@ -1,13 +1,15 @@
-import NavBar from "./NavBar/NavBar"
-import Footer from "./Footer/Footer"
-import { Outlet } from "react-router-dom"
+import Hero from "./Hero/Hero"
+import About from "./About/About"
+import StudentsReview from "../StudentsReview/StudentsReview"
+import FAQsection from "../FAQsection/FAQsection"
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
-       <Outlet />
-      <Footer />
+      <Hero />
+      <About />
+      <StudentsReview />
+      <FAQsection />
     </div>
   )
 }

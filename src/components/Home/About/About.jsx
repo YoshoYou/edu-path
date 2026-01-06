@@ -6,7 +6,7 @@ const About = () => {
   let aboutImg=[<BookIcon/>,<PersonStandingIcon/>,<GraduationCapIcon />,<LampDeskIcon />]
   
   return (
-    <div className="flex  py-20 flex-col items-center justify-center gap-20 px-4 sm:h-full">
+    <div className="flex  py-20 flex-col items-center justify-center gap-20 my-20 px-4 sm:h-full">
       <div className="flex flex-col items-center gap-2">
         <h3 className="font-bold text-4xl">Why Choose <span className="text-transparent bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text">EduPath?</span> </h3>
         <p className="text-gray-600">We offer courses in many fields that help you to crack your way into the future of development

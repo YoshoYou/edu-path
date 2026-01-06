@@ -144,4 +144,14 @@ export  const AboutList=[
             question:'Can I get a refund?',
             answer:'In case you don\'t the course you can contact with the supporting team and have a refund up to 50% of the course price '
         },
-    ]
+    ];
+export   const logInfo=[{
+        title:'10,000+ Courses',
+        des:'Learn anything, anytime'
+    },{
+        title:'Expert Instructors',
+        des:'Learn from the best'
+    },{
+        title:'Lifttime Access',
+        des:'Learn at your own place'
+    },]
