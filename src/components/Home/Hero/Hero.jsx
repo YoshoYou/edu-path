@@ -21,7 +21,7 @@ const Hero = () => {
     },
   ]
   return (
-    <div className="grid bg-emerald-50  px-10 py-30  grid-cols-4 gap-30  h-full w-full " id='hero'>
+    <div className="grid bg-emerald-50  px-10 py-30  grid-cols-4 gap-30  h-full w-full ">
       <div className="flex flex-col justify-center gap-10 sm:w-fit w-[80%]  col-span-4 xl:col-span-2">
         <span className='flex w-fit  bg-emerald-100  rounded-xl p-1 text-sm text-emerald-600'>
             <LucideGraduationCap  className='pr-1 text-black'/> Join 50,000+ students learning today

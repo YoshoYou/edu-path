@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import MobileNav from "../MobileNav/MobileNav"
 import { NavLink, useNavigate } from "react-router-dom"
 import { useCourse } from "../../Context/ChosenCourse"
-export  const List=['Home','Courses',<ShoppingBasket className="hover:text-emerald-300 "/>]
+export  const List=['Home','Courses',<ShoppingBasket className="hover:text-emerald-400  "/>]
 export  const listLink=['home','courses','cart']
 const NavBar = () => {
    
@@ -33,8 +33,8 @@ const NavBar = () => {
                     <ul className={`sm:flex hidden sm:gap-5 md:gap-20 text-2xl  `}>
                         {
                             List.map((item,index)=>(
-                        <NavLink to={`${listLink[index]}`} className={`cursor-pointer hover:bg-linear-to-br hover:from-emerald-600 hover:to-teal-600 hover:bg-clip-text hover:text-transparent self-center
-                             ${active===index?'bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent':'text-gray-500'}`}
+                        <NavLink to={`${listLink[index]}`} className={`cursor-pointer hover:text-emerald-400 self-center
+                             ${active===index?'text-emerald-400  ':'text-gray-500'}`}
                         onClick={()=>setActive(index)}
                         key={index}>
                             {item}

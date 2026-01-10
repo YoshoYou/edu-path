@@ -1,29 +1,55 @@
 import {  Navigate, useParams } from "react-router-dom";
-import { courseData } from "../data/data";
+import { courseData, courseDetails } from "../data/data";
+import { CalendarDays, Check, CheckCheck, CheckCheckIcon, CheckCircle, CheckCircle2, CheckCircle2Icon, Clock, Languages, Timer, TimerReset } from "lucide-react";
 
 const CourseDetails = () => {
-const { id } = useParams();
+  const { id } = useParams();
 const course = courseData.find(c => c.id == id);
+  const detailsList =[
+    {title:'Days of the course:',
+      img: <CalendarDays className="w-5 h-5" />,
+      purpose:course.day
+    },
+    {title:'Timing:',
+      img: <Clock className="w-5 h-5"/>,
+      purpose:course.time
+    },
+    {title:'Duration:',
+      img:  <TimerReset className="w-5 h-5"/>,
+      purpose:course.duration
+    },
+    {title:' Language of the course:',
+      img: <Languages className="w-5 h-5" />,
+      purpose:course.language
+    },
+  ]
+
   if (!course) {
     return <Navigate to="*"  />
   }
 
   return (
-    <div className="h-full bg-gray-300 flex flex-col relative items-center justify-start py-5">
-       <h2 className=" mb-10 text-4xl font-bold ">Course Details Page</h2>
-      <div className="bg-emerald-100 sm:w-100 w-70 rounded-t-xl">
-        <img src={course.img} alt="course image" className="w-100 h-60 rounded-t-xl" />
+    <div className="h-full  bg-gray-300 flex flex-col relative items-center justify-start py-5">
+      <div className="bg-emerald-100 sm:w-150 w-70 rounded-t-xl my-5">
+        <img src={course.img} alt="course image" className="w-full h-60 rounded-t-xl" />
               <div className="flex flex-col p-3">
                <span className="text-2xl font-black">{course.title}</span>
                <span className="text-lg text-blue-600">{course.category}</span>
                <p className="text-xl font-semibold m-1">{course.des}</p>
-               <span className="mt-1" >Days of the course: {course.day}</span>
-               <span className="mt-1" >Timing: {course.time}</span>
-                <span className="mt-1" > Duration: {course.duration}</span>
-                <span className="mt-1" > Language of the course: {course.language}</span>
+               {detailsList.map((item,index)=>(
+                  <span key={index} className="mt-1 flex flex-row w-full justify-between py-3 text-lg" >{item.title} {item.purpose} {item.img}</span>
+               ))}
                 <div className="flex justify-between text-blue-600 font-semibold mt-3">
                   <span >{course.lessonCount}</span>
                 <span >{course.price}$</span>
+                </div>
+                <div className="flex flex-col  my-6 ">
+                  <span className="sm:text-4xl text-xl font-semibold ">What you'll gain :</span>
+                  <div className="grid grid-cols-2 content-start  my-6 gap-4">
+                  {courseDetails.map((item ,index)=>(
+                    <span key={index} className="flex flex-row  gap-3 text-[12px] sm:text-xl"><CheckCircle2Icon className="fill-emerald-500 w-5 h-5" /> {item}</span>
+                  ))}
+                  </div>
                 </div>
                </div>
       </div>

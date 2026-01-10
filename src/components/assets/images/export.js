@@ -4,10 +4,10 @@ import node from './node.jpeg'
 import html from './html.jpeg'
 import photoshop from './photoshop.jpeg'
 import ui from './ui.jpeg'
-import ux from './ux.jpeg'
 import cssImg from './css.jpeg'
 import buissness from './buissness.jpeg'
 import photo from './photo.png'
 import girl from './girl.jpg'
 import girl_2 from './girl_2.jpg'
-export {skill,check,node,girl,girl_2,cssImg,html,photo,photoshop,ui,ux,buissness}
+import analysis from './analysis.jpeg'
+export {skill,check,node,girl,girl_2,cssImg,html,photo,photoshop,ui,buissness,analysis}

@@ -17,7 +17,7 @@ const Cart = () => {
       });
     }
   return (
-    <div className="bg-emerald-100  w-full px-10 py-5 h-screen relative">
+    <div className="bg-emerald-100  w-full px-10 py-5  relative ">
         <div className="flex sm:justify-between sm:flex-row flex-col gap-5 "><h3 className="text-2xl font-bold">Cart Details </h3>
          <span className="text-xl font-semibold">Total price: {cartInfo.reduce((total, item) =>{ return total =total + item.price}, 0)} $</span>
          </div>

@@ -1,5 +1,4 @@
-import { BookAIcon, GraduationCapIcon, LampDeskIcon, PersonStandingIcon } from "lucide-react";
-import { buissness, cssImg, girl, girl_2, html, node, photo, photoshop, ui } from "../assets/images/export"
+import { analysis, buissness, cssImg, girl, girl_2, html, node, photo, photoshop, ui } from "../assets/images/export"
 
 export const courseData=[
     {
@@ -10,6 +9,7 @@ export const courseData=[
         img:`${cssImg}`,
         lessonCount:'15 lessons',
         category:'Front-End',
+        filterCategory:'dev',
         duration:'2 weeks',
         language:'English',
         time:'10:00-02:00',
@@ -25,6 +25,7 @@ export const courseData=[
         id:'ui',
         lessonCount:'40 lessons',
         category:'Designing',
+        filterCategory:'des',
         duration:'1 month',
         language:'English',
         time:'03:00-05:00',
@@ -40,6 +41,7 @@ export const courseData=[
         id:'js',
         lessonCount:'15 lessons',
         category:'Front-End / Back-End',
+        filterCategory:'dev',
         duration:'5 weeks',
         language:'English',
         time:'07:00-09:00',
@@ -53,7 +55,8 @@ export const courseData=[
         des:'Attending an advanced Excel course to start your own buissness',
         img:`${buissness}`,
         lessonCount:'30 lessons',
-        category:'Front-End',
+        category:'Business',
+        filterCategory:'bui',
         duration:'12 weeks',
         language:'English',
         time:'12:00-02:00',
@@ -68,6 +71,7 @@ export const courseData=[
         img:`${photoshop}`,
         lessonCount:'100 lessons',
         category:'Designing',
+        filterCategory:'des',
         duration:'20 weeks',
         language:'English',
         time:'05:00-07:00',
@@ -78,15 +82,76 @@ export const courseData=[
         title:'HTML',
         price:20,
         level:'Begginer',
-        des:'Learn HTML and the basic knowledg to build your app',
+        des:'Learn HTML and the basic knowledg to build your web appllication',
         img:`${html}`,
         lessonCount:'15 lessons',
         category:'Front-End',
+        filterCategory:'dev',
         duration:'2 weeks',
         language:'English',
         time:'01:00-03:00',
         day:'Wen - Mon',
-        id:6
+        id:6,
+    },
+    {
+        title:'English',
+        price:47,
+        level:'Advanced',
+        des:'Learn English language in interactive way to enhance your buisness',
+        img:`${html}`,
+        lessonCount:'75 lessons',
+        category:'English',
+        filterCategory:'bui',
+        duration:'4 month',
+        language:'English',
+        time:'011:00-01:00',
+        day:'sun - tue',
+        id:7,
+    },
+    {
+        title:'Buisness Analysis',
+        price:120,
+        level:'intermediate',
+        des:'Learn the requirements of buisness analysis to level up  your skills',
+        img:`${analysis}`,
+        lessonCount:'54 lessons',
+        category:'English',
+        filterCategory:'bui',
+        duration:'3 month',
+        language:'English',
+        time:'04:00-06:00',
+        day:'fri - mon',
+        id:8,
+    },
+    {
+        title:'Flutter',
+        price:85,
+        level:'Advanced',
+        des:'Learn the requirements of application front-end develpment to level up  your app',
+        img:`${analysis}`,
+        lessonCount:'60 lessons',
+        category:'English',
+        filterCategory:'dev',
+        duration:'2 month',
+        language:'English',
+        time:'10:00-12:00',
+        day:'tue - thu',
+        id:9,
+    },
+    {
+        title:'Odoo',
+        price:74,
+        level:'intermediate',
+        des:'Learn the skills as odoo developer and learn some python skills',
+        img:`${analysis}`,
+        lessonCount:'73 lessons',
+        category:'English',
+        filterCategory:'dev',
+        duration:'1 month',
+        language:'English',
+        time:'02:00-04:00',
+        day:'fri - sat',
+        id:9,
     },
 ];
 export  const AboutList=[
@@ -154,4 +219,27 @@ export   const logInfo=[{
     },{
         title:'Lifttime Access',
         des:'Learn at your own place'
-    },]
+    },];
+
+    export const filterDate = [
+        {   
+            title:'All',
+            id:'all'
+    },
+        {   
+            title:'Development',
+            id:'dev'
+    },
+        {   
+            title:'Designing',
+            id:'des'
+    },
+        {   
+            title:'Buisness',
+            id:'bui'
+    },
+];
+
+export const courseDetails = [
+    'Lifetime access','Mobile and desktop acccess','Assignments and quizzes','Certificate of completion','Downloadable resources','Direct instructor support'
+]

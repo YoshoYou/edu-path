@@ -21,3 +21,10 @@
     transform: translateX(50px);
   }
 }
+
+/* Utility to disable animations when a class should be present but not run */
+.no-animate {
+  animation: none !important;
+  -webkit-animation: none !important;
+  animation-play-state: paused !important;
+}
