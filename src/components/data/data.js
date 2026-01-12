@@ -1,4 +1,4 @@
-import { analysis, buissness, cssImg, girl, girl_2, html, node, photo, photoshop, ui } from "../assets/images/export"
+import { analysis, buiAn, buissness, cssImg, english, flutter, girl, girl_2, html, node, odoo, photo, photoshop, ui } from "../assets/images/export"
 
 export const courseData=[
     {
@@ -98,7 +98,7 @@ export const courseData=[
         price:47,
         level:'Advanced',
         des:'Learn English language in interactive way to enhance your buisness',
-        img:`${html}`,
+        img:`${english}`,
         lessonCount:'75 lessons',
         category:'English',
         filterCategory:'bui',
@@ -113,7 +113,7 @@ export const courseData=[
         price:120,
         level:'intermediate',
         des:'Learn the requirements of buisness analysis to level up  your skills',
-        img:`${analysis}`,
+        img:`${buiAn}`,
         lessonCount:'54 lessons',
         category:'English',
         filterCategory:'bui',
@@ -128,7 +128,7 @@ export const courseData=[
         price:85,
         level:'Advanced',
         des:'Learn the requirements of application front-end develpment to level up  your app',
-        img:`${analysis}`,
+        img:`${flutter}`,
         lessonCount:'60 lessons',
         category:'English',
         filterCategory:'dev',
@@ -143,7 +143,7 @@ export const courseData=[
         price:74,
         level:'intermediate',
         des:'Learn the skills as odoo developer and learn some python skills',
-        img:`${analysis}`,
+        img:`${odoo}`,
         lessonCount:'73 lessons',
         category:'English',
         filterCategory:'dev',
@@ -207,7 +207,7 @@ export  const AboutList=[
         },
         {
             question:'Can I get a refund?',
-            answer:'In case you don\'t the course you can contact with the supporting team and have a refund up to 50% of the course price '
+            answer:'In case you don\'t like the course you can contact with the supporting team and have a refund up to 50% of the course price '
         },
     ];
 export   const logInfo=[{
@@ -242,4 +242,22 @@ export   const logInfo=[{
 
 export const courseDetails = [
     'Lifetime access','Mobile and desktop acccess','Assignments and quizzes','Certificate of completion','Downloadable resources','Direct instructor support'
-]
+];
+  export const heroInfo=[
+    {
+      num:'50K+',
+      des:'Active Students'
+    },
+    {
+      num:'500+',
+      des:'Online Courses'
+    },
+    {
+      num:'100+',
+      des:'Experts instructors'
+    },
+    {
+      num:'95%',
+      des:'Success Rate'
+    },
+  ]

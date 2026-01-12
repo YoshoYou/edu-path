@@ -1,5 +1,6 @@
-import { ArrowBigLeft, ArrowBigRight } from "lucide-react"
+import { AlignVerticalSpaceBetween, ArrowBigLeft, ArrowBigRight, BadgeQuestionMark, CircleQuestionMarkIcon, FileQuestionMarkIcon, LucideMessageCircleQuestion, LucideShieldQuestion, MessageCircleQuestionMarkIcon, MessageSquareQuoteIcon, SmilePlus } from "lucide-react"
 import { FAquestion, reviewList } from "../data/data"
+import { MessageCircleQuestionMark } from "lucide"
 
 const FAQsection = () => {
   return (
@@ -11,8 +12,8 @@ const FAQsection = () => {
     <div className="grid items-center grid-cols-3  gap-6 ">
         {FAquestion.map((item,index)=>(
             <div className=" flex flex-col lg:col-span-1 col-span-3  gap-5 border border-emerald-200 rounded-xl p-6 bg-emerald-50 h-full " key={index}>
-                <p className="font-bold text-xl">{item.question}</p>
-                <p className="text-gray-500 text-xl">{item.answer}</p>
+                <p className="font-bold text-xl flex items-center gap-3"><CircleQuestionMarkIcon className="fill-emerald-400" /> {item.question}</p>
+                <p className="text-gray-500 text-xl ">{item.answer}</p>
 
             </div>
         ))}

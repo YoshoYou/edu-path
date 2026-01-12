@@ -57,7 +57,7 @@ const Courses = () => {
                   {
                     filterDate.map((item,index)=>(
                      <div className="flex flex-row gap-2" key={index}>
-                      <input type="checkbox" name="" id={item.id} className=""  />
+                     {index===0 ?<input  name="option_group" type='radio' id={item.id} defaultChecked   />:<input  name="option_group" type='radio' id={item.id}   />} 
                       <label htmlFor={`${item.id}`} className={`inlilne hover:text-black cursor-pointer ${active===item.id ?'text-black':''} `} onClick={()=>setActive(`${item.id}`)}>{item.title}</label>
                   </div>
                     ))
@@ -67,7 +67,7 @@ const Courses = () => {
             </div>
           </div>
 
-        <div className=" grid xl:grid-cols-3  lg:grid-cols-2 grid-cols-1 place-items-center  gap-5  sm:gap-20 w-fit">
+        <div className=" grid xl:grid-cols-3  lg:grid-cols-2  sm:grid-cols-2 grid-cols-1 place-items-center  gap-5  sm:gap-20 w-fit">
       {filters.map((item,index)=>(
         <div className="border  border-gray-400 bg-gray-100 rounded-xl w-60 sm:w-70 h-full shadow-2xl shadow-gray-400 cursor-pointer hover:shadow-gray-500 " key={index}>
             <img className="w-100 h-50 rounded-tr-xl rounded-tl-xl  " src={item.img} alt="" />
@@ -77,7 +77,7 @@ const Courses = () => {
             <div className="w-fit  my-5 flex gap-5">
                 <button  className="border sm:text-lg text-[15px] font-semibold border-emerald-500 bg-emerald-300 hover:bg-emerald-200 cursor-pointer rounded-xl sm:p-2 p-0.5 " onClick={() => handleViewDetails(item)} > Details</button>
                {logged ? <button className="flex font-semibold  border sm:text-lg text-[15px] border-emerald-500 bg-emerald-300 hover:bg-emerald-200 cursor-pointer rounded-xl sm:p-2 p-1 " onClick={()=>handleAdd(item)}>Add to Cart <ShoppingBasket className="self-center mx-2 w-5 "/></button>:
-              <button className="flex  font-semibold  border sm:text-lg text-[15px] border-emerald-500 bg-emerald-300 hover:bg-emerald-200 cursor-pointer rounded-xl sm:p-2  " >Log in to purshase</button> }
+              <button className="  font-semibold  border sm:text-lg text-[15px] border-emerald-500 bg-emerald-300 hover:bg-emerald-200 cursor-pointer rounded-xl sm:p-2  " >Log in to purshase</button> }
             </div>
             <div className="flex justify-between ">
                 <span className="text-blue-600 font-semibold text-lg p-2">{item.price} $</span>

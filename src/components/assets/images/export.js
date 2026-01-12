@@ -10,4 +10,9 @@ import photo from './photo.png'
 import girl from './girl.jpg'
 import girl_2 from './girl_2.jpg'
 import analysis from './analysis.jpeg'
-export {skill,check,node,girl,girl_2,cssImg,html,photo,photoshop,ui,buissness,analysis}
+import flutter from './flutter.jpeg'
+import buiAn from './buiAn.jpeg'
+import english from './english.jpeg'
+import odoo from './odoo.jpeg'
+
+export {skill,check,node,girl,girl_2,cssImg,html,photo,photoshop,ui,buissness,analysis,odoo,flutter,english,buiAn}

@@ -43,8 +43,9 @@ const NavBar = () => {
                         }
                     </ul>
             </div>
-            <div className="text-white sm:block hidden bg-linear-to-br from-emerald-600 to-teal-600 p-2 rounded-lg cursor-pointer  hover:from-emerald-500 hover:to-teal-500">
-                    <button className="cursor-pointer" onClick={handleRouteChange}>{logged?'Log Out':"Log In"}</button>
+            <div className=" text-white sm:block hidden bg-linear-to-br from-emerald-600 to-teal-600
+             p-2 rounded-lg cursor-pointer  hover:from-emerald-500 hover:to-teal-500" onClick={handleRouteChange}>
+                    <button className="cursor-pointer" >{logged?'Log Out':"Log In"}</button>
             </div>
             <MobileNav />
         </div>

@@ -7,11 +7,11 @@ const CourseDetails = () => {
 const course = courseData.find(c => c.id == id);
   const detailsList =[
     {title:'Days of the course:',
-      img: <CalendarDays className="w-5 h-5" />,
+      img: <CalendarDays className="" />,
       purpose:course.day
     },
     {title:'Timing:',
-      img: <Clock className="w-5 h-5"/>,
+      img: <Clock className=""/>,
       purpose:course.time
     },
     {title:'Duration:',
@@ -37,17 +37,17 @@ const course = courseData.find(c => c.id == id);
                <span className="text-lg text-blue-600">{course.category}</span>
                <p className="text-xl font-semibold m-1">{course.des}</p>
                {detailsList.map((item,index)=>(
-                  <span key={index} className="mt-1 flex flex-row w-full justify-between py-3 text-lg" >{item.title} {item.purpose} {item.img}</span>
+                  <span key={index} className="mt-1  flex flex-row justify-between  py-3 sm:text-lg text-[14px]" >{item.title} {item.purpose} {item.img}</span>
                ))}
-                <div className="flex justify-between text-blue-600 font-semibold mt-3">
+                <div className="flex justify-between text-blue-600 font-semibold sm:text-2xl text-lg mt-3">
                   <span >{course.lessonCount}</span>
-                <span >{course.price}$</span>
+                <span  >{course.price}$</span>
                 </div>
                 <div className="flex flex-col  my-6 ">
                   <span className="sm:text-4xl text-xl font-semibold ">What you'll gain :</span>
-                  <div className="grid grid-cols-2 content-start  my-6 gap-4">
+                  <div className="grid grid-cols-2 content-start   my-6 gap-4">
                   {courseDetails.map((item ,index)=>(
-                    <span key={index} className="flex flex-row  gap-3 text-[12px] sm:text-xl"><CheckCircle2Icon className="fill-emerald-500 w-5 h-5" /> {item}</span>
+                    <span key={index} className="flex flex-row  gap-3 text-[12px] sm:text-xl"><CheckCircle2Icon className="fill-emerald-500 sm:block hidden  w-6 h-6" /> {item}</span>
                   ))}
                   </div>
                 </div>

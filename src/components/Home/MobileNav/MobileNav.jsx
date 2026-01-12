@@ -1,6 +1,6 @@
 import { Link, LucideMenu, LucideMenuSquare, LucideSquareMenu, MenuIcon, SquareMenuIcon, X } from "lucide-react"
 import { List, listLink } from "../NavBar/NavBar"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { NavLink, useNavigate } from "react-router-dom"
 import { useCourse } from "../../Context/ChosenCourse"
 const MobileNav = () => {
@@ -34,17 +34,26 @@ const MobileNav = () => {
     useEffect(() => {
       console.log(menuOpen)
     }, [menuOpen])
+
+    const listRef =useRef();
+    useEffect(() => {
+     document.addEventListener('click',(event)=>{
+      if(listRef.current.contains(event.target)){
+        setMenuOpen('close')
+      }
+     })
+    }, )
     
   return (
-    <div className="sm:hidden block  ">
+    <div className="sm:hidden block" ref={listRef}>
       {menuOpen==='default'? <LucideMenuSquare className="w-8 h-8 text-emerald-600 cursor-pointer hover:text-emerald-400 " onClick={openMenu} />:
       menuOpen==='open'?  <X className="w-8 h-8 text-emerald-600 cursor-pointer hover:text-emerald-400" onClick={closeMenu}/> : <LucideMenuSquare className="w-8 h-8 text-emerald-600 cursor-pointer hover:text-emerald-400 " onClick={openMenu} />
         }
-     
-        <ul className={`fixed top-18 bg-gray-50 -right-150 ${menuAnimation}    text-2xl font-bold flex flex-col gap-10 w-full pt-5 px-5 border-b border-gray-300 shadow-gray-300  pb-8 shadow-2xs`}>
+        <ul className={`fixed top-18 bg-gray-50 -right-150 ${menuAnimation}    text-2xl font-bold flex flex-col gap-10 w-full pt-5 px-5 border-b
+           border-gray-300 shadow-gray-300  pb-8 shadow-2xs`} >
                             {
                                 List.map((item,index)=>(
-                            <NavLink to={`${listLink[index]}`} className={`cursor-pointer text-gray-500  hover:bg-linear-to-br hover:from-emerald-600 hover:to-teal-600 hover:bg-clip-text hover:text-transparent`}
+                            <NavLink to={`${listLink[index]}`} className={`cursor-pointer text-gray-500   hover:text-emerald-400 `}
                             key={index}>
                                 {item}
                                 </NavLink>
