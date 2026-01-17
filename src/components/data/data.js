@@ -1,3 +1,4 @@
+import { StarIcon } from "lucide-react";
 import { analysis, buiAn, buissness, cssImg, english, flutter, girl, girl_2, html, node, odoo, photo, photoshop, ui } from "../assets/images/export"
 
 export const courseData=[
@@ -176,16 +177,19 @@ export  const AboutList=[
     name:'Sarah Johnson',
     img:`${girl}`,
     job:'Frontend Developer',
+    stars:['home','light','sdlkfm'],
     review:'EduPath transformed my career! The courses are comprehensive and the instructors are top-notch. Highly recommend to anyone looking to upskill.',
   },{
     name:'Michel Chen',
     img:`${photo}`,
     job:'UI/UX Designer',
     review:'As a beginner, I found EduPath to be incredibly welcoming. The courses are well-structured, and the community support is fantastic. I landed my first developer job thanks to what I learned here!',
-  },{
+    starts:['lsjf','skfl','sfdj']
+},{
     name:'Emily Rodrigues',
     img:`${girl_2}`,
     job:'Data Analyst',
+    stars:['dljfs','sdlfj'],
     review:'The flexibility of learning at my own pace was a game-changer. EduPath allowed me to balance my studies with work and family commitments. The skills have opened new doors for me professionally.',}]
 
     export const FAquestion=[
@@ -210,7 +214,7 @@ export  const AboutList=[
             answer:'In case you don\'t like the course you can contact with the supporting team and have a refund up to 50% of the course price '
         },
     ];
-export   const logInfo=[{
+    export const logInfo=[{
         title:'10,000+ Courses',
         des:'Learn anything, anytime'
     },{
@@ -260,4 +264,6 @@ export const courseDetails = [
       num:'95%',
       des:'Success Rate'
     },
-  ]
+  ];
+
+  

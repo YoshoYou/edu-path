@@ -1,15 +1,30 @@
 .slide-left {
 	animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+.hero-slide-left {
+	animation: hero-slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.hero-slide-left-reverse {
+	animation: hero-slide-left-reverse 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .slide-left-reverse {
 	animation: slide-left-reverse 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @keyframes slide-left {
   0% {
     transform: translateX(50px);
   }
   100% {
     transform: translateX(-600px);
+  }
+}
+@keyframes hero-slide-left {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -19,6 +34,14 @@
   }
   100% {
     transform: translateX(50px);
+  }
+}
+@keyframes hero-slide-left-reverse {
+    0% {
+     transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
